@@ -1,0 +1,33 @@
+<br>
+<h3 align = "center" class="d2"><span>Закажи завтрак/обед/ужин - быстро, легко и удобно!</span></h3><br>
+
+ 
+<div id="card"> 
+  <br>
+  <span matBadge="{{count}}" matBadgeOverlap="false">Найдено товаров по запросу</span><br>
+  <!--<span matBadge="{{count}}" matBadgeOverlap="false" class="sale">Найдено товаров по скидке</span><br>-->
+  <div class="menu_1"><a  (click)='set_category("drink")'>Напитки<img src="http://cdn.onlinewebfonts.com/svg/download_431575.png" id="drinks"></a></div>
+  <div class="menu_1"><a  (click)='set_category("food")'>Еда<img src="https://img2.freepng.ru/20180403/dww/kisspng-hamburger-computer-icons-clip-art-burguer-5ac30474ac7f64.9484633415227301007066.jpg" id="food"></a></div>
+  <div class="menu_1"><a  (click)='set_category("fruits")'>Фрукты<img src="http://cdn.onlinewebfonts.com/svg/download_57929.png" id="fruits"></a></div>
+  <div class="menu_1"><a  (click)='set_category("vegetables")'>Овощи<img src="https://ds05.infourok.ru/uploads/ex/0751/00117ff8-45b0d207/hello_html_m5e72a590.jpg" id="vegetables"></a></div>
+  <div class="menu_1"><a  (click)='set_category("meats")'>Мясные блюда<img src="https://im0-tub-ru.yandex.net/i?id=6bdaebac1c39fa209e3eb648ca84140b&ref=rim&n=33&w=218&h=188" id="meats"></a></div>
+  <div class="menu_1"><a (click) = 'set_category("all")'>Весь список<img src="https://im0-tub-ru.yandex.net/i?id=6ae1d358b1175b347eb77d8b3a17207d&ref=rim&n=33&w=151&h=188" id="all_list"></a></div>
+<div id="block_items">
+  <mat-card class="example-card" *ngFor = 'let product of list'>
+    <mat-card-header>
+      <mat-card-title ng-model = "name">{{product.title}}</mat-card-title>
+      <mat-card-subtitle>{{product.type}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{product.photo}}">
+    <mat-card-content>
+      <p>
+        {{product.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click) = "addToCart(product)">Купить</button>
+      <button mat-button><p ng-model = "price">{{product.price}} руб.</p></button>
+    </mat-card-actions>
+  </mat-card> 
+</div>
+</div>

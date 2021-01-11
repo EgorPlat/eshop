@@ -1,0 +1,18 @@
+<br>
+<table matSort align="center">
+    <tr>
+      <th mat-sort-header="name">Наименование продукта</th>
+      <th mat-sort-header="calories">Калории</th>
+      <th mat-sort-header="fat">Количество</th>
+      <th mat-sort-header="carbs">Цена за штуку</th>
+      <th mat-sort-header="protein">Сумма</th>
+    </tr>
+    <tr *ngFor="let ord of order">
+      <td align="center">{{ord.name}}</td>
+      <td align="center">{{ord.calories}}</td>
+      <td align="center">1шт</td>
+      <td align="center">{{ord.price}}руб</td>
+      <td align="center">50руб</td>
+    </tr> 
+  </table>
+  <!--<button class = "btn-btn-success" (click)="getOrder()">Посмотреть корзину</button>-->

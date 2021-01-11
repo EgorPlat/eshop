@@ -1,0 +1,14 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+#one {
+    background-image: url(https://sun9-69.userapi.com/impg/RZeXGPaiJKKccM4YW_zACiHlqlE2cS8zoVyDxg/biBTuy26tOA.jpg?size=606x451&quality=96&proxy=1&sign=90ea99560cb892181e0f0edf58e4f927&type=album);
+    background-size: 300px 300px;
+}
+.card_input {
+    margin-right: 30px;
+    width: 200px;
+}
+.class {
+    margin-left: -100px;
+}
